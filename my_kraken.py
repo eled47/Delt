@@ -6,8 +6,6 @@ from ccxt.base.errors import ExchangeError
 from my_exchange import MyExchange
 import config
 
-# TODO(vernon): Complete all docstrings
-# TODO(vernon): Fix pylint errors
 
 
 class MyKraken(MyExchange, kraken):
@@ -85,7 +83,7 @@ class MyKraken(MyExchange, kraken):
         else:
             return balances
 
-    # TODO(vernon): Find correct parameter to specify leverage rate
+    
     @request_error_handler
     def open_short_position(self, symbol, amount, leverage=2):
         return self.create_market_sell_order(symbol, amount, {
